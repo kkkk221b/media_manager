@@ -23,10 +23,3 @@ def get_file_by_uid(db: Session, uid: str) -> models.FileMetadata:
 def get_files(db: Session, skip: int = 0, limit: int = 10):
     return db.query(models.FileMetadata).offset(skip).limit(limit).all()
 
-
-def delete_file(db: Session, uid: str):
-    db_file = db.query(models.FileMetadata).filter(models.FileMetadata.uid == uid).first()
-    if db_file:
-        db.delete(db_file)
-        db.commit()
-    return db_file

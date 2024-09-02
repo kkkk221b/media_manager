@@ -9,8 +9,10 @@ class FileBase(BaseModel):
     fileformat: str
     original_name: str
 
+
 class FileCreate(FileBase):
     pass
+
 
 class File(FileBase):
     id: int

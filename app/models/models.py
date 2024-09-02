@@ -1,7 +1,9 @@
+import sqlalchemy
 from sqlalchemy import Column, Integer, String, DateTime, func
 from sqlalchemy.ext.declarative import declarative_base
 
-Base = declarative_base()
+from app.db import Base
+
 
 class FileMetadata(Base):
     __tablename__ = "files"

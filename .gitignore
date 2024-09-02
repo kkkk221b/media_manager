@@ -1,3 +1,7 @@
+.pytest_cache/
+test_files/
 local_disk
 poetry.lock
 *.db
+*.json
+# .env
