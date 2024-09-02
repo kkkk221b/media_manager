@@ -1,4 +1,5 @@
 .pytest_cache/
+.idea/
 test_files/
 local_disk
 poetry.lock
