@@ -10,6 +10,6 @@ from config import config
 def create_app():
     create_directories()
     models.Base.metadata.create_all(bind=engine)
-    app = FastAPI(debug=config.DEBUG_MODE, docs_url='/api/docs')
+    app = FastAPI(docs_url='/api/docs')
     app.include_router(file_router, prefix="/api/v1", tags=["files"])
     return app
